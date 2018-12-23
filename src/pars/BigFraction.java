@@ -4,14 +4,6 @@ import java.math.BigInteger;
 import java.math.BigDecimal;
 
 
-public class BigFraction {
-    // member variables
-    private BigInteger numerator, denominator;  // stores the fraction data
-   
-    public BigFraction() {
-        numerator = BigInteger.ZERO;
-        denominator = BigInteger.ZERO;
-    }
 
    
     public BigFraction(String str) {
