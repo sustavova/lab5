@@ -31,10 +31,30 @@ public class BigFraction {
     }
 
    
-    
+    public BigInteger getNumerator() {
+        return numerator;
+    }
+
+   
+    public void setNumerator(BigInteger num) {
+        numerator = num;
+    }
 
     
+    public BigInteger getDenominator() {
+        return denominator;
+    }
+
    
+    public void setDenominator(BigInteger den) {
+        denominator = den;
+    }
+
+    
+    public BigFraction add(BigFraction b) {
+        // check preconditions
+        if ((denominator.equals(BigInteger.ZERO)) || (b.denominator.equals(BigInteger.ZERO)))
+            throw new IllegalArgumentException("invalid denominator");
         // find lowest common denominator
         BigInteger common = lcd(denominator, b.denominator);
         // convert fractions to lcd
