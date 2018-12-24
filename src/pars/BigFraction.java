@@ -4,6 +4,15 @@ import java.math.BigInteger;
 import java.math.BigDecimal;
 
 
+public class BigFraction {
+    // member variables
+	
+    private BigInteger numerator, denominator;  // stores the fraction data
+   
+    public BigFraction() {
+        numerator = BigInteger.ZERO;
+        denominator = BigInteger.ZERO;
+    }
 
    
     public BigFraction(String str) {
@@ -22,30 +31,10 @@ import java.math.BigDecimal;
     }
 
    
-    public BigInteger getNumerator() {
-        return numerator;
-    }
-
-   
-    public void setNumerator(BigInteger num) {
-        numerator = num;
-    }
+    
 
     
-    public BigInteger getDenominator() {
-        return denominator;
-    }
-
    
-    public void setDenominator(BigInteger den) {
-        denominator = den;
-    }
-
-    
-    public BigFraction add(BigFraction b) {
-        // check preconditions
-        if ((denominator.equals(BigInteger.ZERO)) || (b.denominator.equals(BigInteger.ZERO)))
-            throw new IllegalArgumentException("invalid denominator");
         // find lowest common denominator
         BigInteger common = lcd(denominator, b.denominator);
         // convert fractions to lcd
