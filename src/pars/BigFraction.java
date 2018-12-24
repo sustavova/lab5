@@ -19,15 +19,7 @@ public class BigFraction {
         if (str.indexOf("/") != -1){
             String num = str.substring(0, str.indexOf("/"));
             String denom = str.substring(str.indexOf("/")+1, str.length());
-            numerator = new BigInteger(num);
-            denominator = new BigInteger(denom);
-            if (denominator.equals(BigInteger.ZERO)) {
-                throw new IllegalArgumentException("invalid argument");
-            }
-        }else{
-            numerator = new BigInteger(str);
-            denominator = new BigInteger(BigInteger.ONE.toString());
-        }
+   
     }
 
    
